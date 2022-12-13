@@ -36,3 +36,9 @@
 .p-3 {
   padding: 30px;
 }
+
+.image {
+  position: relative;
+  width: 100%;
+  background-color: black;
+}
