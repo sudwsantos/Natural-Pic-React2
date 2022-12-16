@@ -8,12 +8,11 @@ const Galeria = () => {
 
   return (
     <div className="galeria grid-columns-5 p-3">
-      {data.map((foto) => {
+      {data.map((foto, i) => {
         return (
-          <div className="image">
-            <p>Prueba texto</p>
-            <img src={foto.src.tiny} alt='imagen fondo' />
-            <Heart />
+          <div key={i} className="foto">
+              <Heart />
+            <img src={foto.src.tiny} alt="imagen fondo"/>
           </div>
         );
 
