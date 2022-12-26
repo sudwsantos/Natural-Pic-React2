@@ -1,26 +1,25 @@
 import React from "react";
 import "../assets/css/galeria.css";
-import Allfotos from "../fotos.json";
-import Heart from "./Heart";
+import { useContext } from "react";
+import FotosContext from "../Context/FotosContext";
+import ImgCard from "./ImgCard";
 
-const Galeria = () => {
-  const data = Allfotos.photos;
+export default function Home() {
+  const { fotos, setFotos } = useContext(FotosContext);
+
+  const changeLiked = (foto) => {
+    foto.liked = !foto.liked;
+    setFotos([...fotos]);
+  };
 
   return (
     <div className="galeria grid-columns-5 p-3">
-      {data.map((foto, i) => {
-        return (
-          <div key={i} className="foto">
-              <Heart />
-            <img src={foto.src.tiny} alt="imagen fondo"/>
-          </div>
-        );
-
-      
+      {fotos &&
+        fotos.map((foto) => {
+          return (
+            <ImgCard key={foto.id} foto={foto} changeLiked={changeLiked} />
+          );
         })}
-        
     </div>
   );
-};
-
-export default Galeria;
+}

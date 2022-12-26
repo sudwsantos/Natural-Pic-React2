@@ -1,6 +1,5 @@
 .galeria {
   display: grid;
- 
 }
 
 .grid-columns-5 {
@@ -12,7 +11,7 @@
 
 .galeria .foto {
   cursor: pointer;
-  padding: 10px 10px 0px 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,9 +20,10 @@
   background-size: cover;
   background-position: center;
   color: white;
-  text-align: right;
+  text-align: center;
   text-shadow: 0px 0px 15px black;
-  background-color: white
+  background-color: rgb(180, 56, 56);
+  background-image: url("../iconos/heart.svg");
 }
 
 .galeria .foto:hover {
