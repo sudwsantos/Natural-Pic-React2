@@ -1,5 +1,6 @@
 import React from "react";
 import Heart from "./Heart";
+import "../assets/css/galeria.css"
 
 const ImgCard = ({ foto, changeLiked }) => {
   return (
